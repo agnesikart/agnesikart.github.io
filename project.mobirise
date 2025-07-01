@@ -134,7 +134,8 @@
         "meta_descr": "Kartki okolicznościowe • Ilustracje • Zaproszenia • Projekty graficzne • Stwórzmy razem coś ładnego!",
         "header_custom": "",
         "footer_custom": "",
-        "html_before": ""
+        "html_before": "",
+        "meta_image": "@PROJECT_PATH@/assets/images/img-3099-2000x2000.jpg"
       },
       "components": [
         {
