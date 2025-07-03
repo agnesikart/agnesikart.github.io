@@ -9128,6 +9128,40 @@ a {
 .cid-uNOAZOzj5U H6 {
   text-align: center;
 }
+.cid-uPSAmxCXws {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #fafafa;
+}
+.cid-uPSAmxCXws .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-uPSAmxCXws .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-uPSAmxCXws .mbr-text,
+.cid-uPSAmxCXws .mbr-section-btn {
+  color: #232323;
+}
+.cid-uPSAmxCXws .card-title,
+.cid-uPSAmxCXws .card-box {
+  color: #232323;
+}
+.cid-uPSAmxCXws .mbr-text,
+.cid-uPSAmxCXws .link-wrap {
+  color: #ffffff;
+}
+.cid-uPSAmxCXws .card-box .mbr-text,
+.cid-uPSAmxCXws .mbr-section-btn {
+  color: #232323;
+}
+
 .cid-uOu6qVrr4C {
   padding-top: 0rem;
   padding-bottom: 0rem;
