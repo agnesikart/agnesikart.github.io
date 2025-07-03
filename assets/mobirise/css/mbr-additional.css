@@ -9162,25 +9162,31 @@ a {
   color: #232323;
 }
 
-.cid-uPSAmxCXws .mbr-iconfont-social {
-  margin: 0.5rem;
+
+.cid-uPSAmxCXws .bg-behance {
+  background: #0056ff;
+  color: #ffffff;
+}
+.cid-uPSAmxCXws .bg-behance:hover {
+  background: #0045cc;
+}
+.cid-uPSAmxCXws .iconfont-wrapper {
+  display: inline-block;
   font-size: 32px;
-  display: flex;
   border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
   text-align: center;
-  color: #e6c63b;
-  border: 2px solid #e6c63b;
-  justify-content: center;
-  align-content: center;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
-.cid-uPSAmxCXws .mbr-iconfont-social:before {
-  padding: 0.6rem;
+.cid-uPSAmxCXws [class^="socicon-"]:before,
+.cid-uPSAmxCXws [class*=" socicon-"]:before {
+  line-height: 55px;
+  padding: .6rem;
 }
-.cid-uPSAmxCXws .mbr-iconfont-social:hover {
-  background-color: #e6c63b;
-  color: #000000;
-}
+
+
 
 .cid-uOu6qVrr4C {
   padding-top: 0rem;
