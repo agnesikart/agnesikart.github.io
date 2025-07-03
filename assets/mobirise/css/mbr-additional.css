@@ -9136,6 +9136,9 @@ a {
 .cid-uPSAmxCXws .mbr-fallback-image.disabled {
   display: none;
 }
+.cid-uPSAmxCXws .mb-4 {
+  margin-bottom: 0rem !important;
+}
 .cid-uPSAmxCXws .mbr-fallback-image {
   display: block;
   background-size: cover;
@@ -9168,7 +9171,7 @@ a {
   color: #ffffff;
 }
 .cid-uPSAmxCXws .bg-behance:hover {
-  background: #000000;
+  background: #161616;
   color: #e6c63b;
 }
 .cid-uPSAmxCXws .iconfont-wrapper {
