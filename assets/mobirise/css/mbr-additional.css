@@ -102,16 +102,16 @@ body {
   background-color: #353535 !important;
 }
 .bg-success {
-  background-color: #dba23a !important;
+  background-color: #F4B72F !important;
 }
 .bg-info {
-  background-color: #47b5ed !important;
+  background-color: #F4B72F !important;
 }
 .bg-warning {
-  background-color: #e6c63b !important;
+  background-color: #F4B72F !important;
 }
 .bg-danger {
-  background-color: #ff9966 !important;
+  background-color: #F4B72F !important;
 }
 .btn-primary,
 .btn-primary:active {
