@@ -137,8 +137,8 @@ body {
 }
 .btn-secondary,
 .btn-secondary:active {
-  background-color: #ffe161 !important;
-  border-color: #ffe161 !important;
+  background-color: #F4B72F !important;
+  border-color: #F4B72F !important;
   color: #614f00 !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
@@ -154,8 +154,8 @@ body {
 .btn-secondary.disabled,
 .btn-secondary:disabled {
   color: #614f00 !important;
-  background-color: #ffd10a !important;
-  border-color: #ffd10a !important;
+  background-color: #F4B72F !important;
+  border-color: #F4B72F !important;
 }
 .btn-info,
 .btn-info:active {
@@ -181,8 +181,8 @@ body {
 }
 .btn-success,
 .btn-success:active {
-  background-color: #dba23a !important;
-  border-color: #dba23a !important;
+  background-color: #F4B72F !important;
+  border-color: #F4B72F !important;
   color: #ffffff !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
@@ -203,8 +203,8 @@ body {
 }
 .btn-warning,
 .btn-warning:active {
-  background-color: #e6c63b !important;
-  border-color: #e6c63b !important;
+  background-color: #F4B72F !important;
+  border-color: #F4B72F !important;
   color: #ffffff !important;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
@@ -320,9 +320,9 @@ body {
 .btn-secondary-outline:focus,
 .btn-secondary-outline.focus,
 .btn-secondary-outline.active {
-  color: #ffd10a !important;
+  color: #F4B72F !important;
   background-color: transparent!important;
-  border-color: #ffd10a !important;
+  border-color: #F4B72F !important;
   box-shadow: none!important;
 }
 .btn-secondary-outline.disabled,
