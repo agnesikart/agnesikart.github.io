@@ -5,7 +5,7 @@ body {
   font-family: Jost;
 }
 .display-1 {
-  font-family: 'TT-Lovelies-Script';
+  font-family: 'Dreaming-Outloud-Script';
   font-size: 2.2rem;
   line-height: 1.1;
 }
@@ -13,7 +13,7 @@ body {
   font-size: 2.75rem;
 }
 .display-2 {
-  font-family: 'TT-Lovelies-Script';
+  font-family: 'Dreaming-Outloud-Script';
   font-size: 1.4rem;
   line-height: 1.1;
 }
@@ -519,7 +519,7 @@ a.text-white.active {
 a.text-black:hover,
 a.text-black:focus,
 a.text-black.active {
-  color: #000000 !important;
+  color: #dba42a !important;
 }
 a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-caption) {
   position: relative;
@@ -535,10 +535,10 @@ a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-cap
   background-position: 0px 1.2em;
 }
 .nav-tabs .nav-link.active {
-  color: #353535;
+  color: #dba42a;
 }
 .nav-tabs .nav-link:not(.active) {
-  color: #232323;
+  color: #dba42a;
 }
 .alert-success {
   background-color: #70c770;
@@ -9167,12 +9167,12 @@ a {
 
 
 .cid-uPSAmxCXws .bg-behance {
-  background: #e6c63b;
+  background: #F4B72F;
   color: #ffffff;
 }
 .cid-uPSAmxCXws .bg-behance:hover {
-  background: #161616;
-  color: #e6c63b;
+  background: #dba42a;
+  color: #ffffff;
 }
 .cid-uPSAmxCXws .iconfont-wrapper {
   display: inline-block;
