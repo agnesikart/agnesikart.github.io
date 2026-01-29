@@ -1,0 +1,16 @@
+stackbitVersion: ~0.6.0
+ssgName: static
+nodeVersion: '18'
+contentSources:
+  - type: files
+    config:
+      container: .
+      sources:
+        - type: json
+          name: content
+          file: content.json
+models:
+  page:
+    type: page
+    layout: index.html
+    urlPath: /
