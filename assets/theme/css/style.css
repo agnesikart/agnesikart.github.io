@@ -696,6 +696,7 @@ input[type=range] {
 .navbar-toggler:hover {
   text-decoration: none;
   box-shadow: none;
+
 }
 
 .navbar-toggler-icon {

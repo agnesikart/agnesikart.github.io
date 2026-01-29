@@ -7,6 +7,7 @@
   transition: all 0.45s ease;
   z-index: 1030;
   background: #282828; }
+  
   .navbar-dropdown .navbar-logo {
     margin-right: 0.8rem;
     transition: margin 0.3s ease-in-out;
@@ -47,6 +48,8 @@
     .navbar-dropdown.navbar-short .navbar-logo.mbr-iconfont {
       font-size: 2.375rem;
       line-height: 2.375rem; }
+
+
   .navbar-dropdown.navbar-short .mbr-table-cell {
     height: 3.625rem; }
   .navbar-dropdown .navbar-close {
@@ -130,7 +133,19 @@
     .nav-dropdown .dropdown-item:focus, .nav-dropdown .dropdown-item:hover {
       background: none; }
 
+.logo-phone{
+  display: none !important;
+}
+
 @media (max-width: 767px) {
+  .logo-phone{
+    display: block !important;
+  }
+
+  .logo-laptop{
+    display: none !important;
+  }
+
   .nav-dropdown.navbar-toggleable-sm {
     bottom: 0;
     display: none;
