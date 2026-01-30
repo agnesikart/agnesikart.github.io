@@ -2866,10 +2866,16 @@ content: "";
   position: absolute;
   top: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 1091px) {
   .cid-tImj4Wzft6 .image-wrapper {
     margin-bottom: 1rem;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
   }
+  .cid-tImj4Wzft6 img {
+  width: 80% !important;
+}
 }
 .cid-tImj4Wzft6 img {
   width: 100%;
