@@ -552,9 +552,11 @@ a.text-black:hover:before , a.text-black.active:before {
 }
 
 
+
+
 a.text-black:focus,
 a.text-black.active {
-  color: #232323 !important;
+  color: #232323 ;
 }
 a[class*="text-"]:not(.nav-link):not(.dropdown-item):not([role]):not(.navbar-caption) {
   position: relative;
@@ -1014,6 +1016,7 @@ a {
   border-right: 5px;
   background-color: currentColor;
 }
+
 .cid-tIh5SHPU18 button.navbar-toggler .hamburger span:nth-child(1) {
   top: 0;
   transition: all .2s;
@@ -1189,6 +1192,17 @@ a {
   .cid-uNNLOOR1GY form .mbr-section-btn .btn {
     width: 100%;
   }
+
+  a.text-black.active::after {
+content: "";
+    position: absolute;
+    bottom: -3px;     /* Odległość linii od tekstu */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;     /* Możesz ustawić stałą szerokość linii (np. 40px) lub 60% */
+    height: 2.5px;     /* Grubość linii */
+    background-color: #dba42a; /* Kolor Twojej linii */}
+
 }
 .cid-uPdBvUznAO {
   padding-top: 4rem;
