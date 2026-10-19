@@ -279,3 +279,188 @@
   transition: none !important; }
 
 
+/* Tło sekcji */
+    .instagram-section {
+      background-image: url("../../../assets/images/banner-instagram.png");
+      padding: 80px 10px;
+      width: 100%;
+    }
+
+    /* Tytuł */
+    .insta-title {
+      font-family: 'Dreaming-Outloud-Sans','Caveat', cursive;
+      font-size: 2.4rem;
+      color: #4A372E;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    }
+
+    /* Kontener dla odręcznego okręgu */
+    .insta-handle-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+      margin-bottom: 15px !important;
+    }
+
+    /* Link tekstowy */
+    .insta-handle-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: #4A372E;
+      text-decoration: none;
+      position: relative;
+      z-index: 2;
+      padding: 8px 22px;
+      display: inline-block;
+    }
+
+    /* SVG Odręcznego Okręgu */
+    .hand-drawn-svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 115%;
+      height: 130%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+.hand-drawn-svg path {
+  fill: none;
+  stroke: #F4B72F;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  
+  /* Używamy nowej, dużej skali, aby precyzyjnie kontrolować rysowanie */
+  stroke-dasharray: 500; /* Długość linii */
+  stroke-dashoffset: 500; /* Startujemy z w pełni ukrytą linią */
+  
+  /* PŁYNNA ANIMACJA: dodana płynność ruchu dla cyklu (cubic-bezier) */
+  animation: drawCirclePlynny 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* NOWA, PRECYZYJNA DEFINICJA ANIMACJI */
+@keyframes drawCirclePlynny {
+  0% {
+    stroke-dashoffset: 500; /* W pełni ukryty */
+    opacity: 0;
+  }
+  15% {
+    opacity: 1; /* Płynne wejście przezroczystości */
+  }
+  
+  /* KLUCZ: Płynne rysowanie i ZAMYKANIE elipsy */
+  60% {
+    stroke-dashoffset: 0; /* Tutaj elipsa zamyka się PŁYNNIE bez skoku */
+    opacity: 1;
+  }
+  
+  /* Trwanie i znikanie przed pętlą */
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0; /* Znika przed restartem */
+  }
+}
+
+ /* Siatka 4 pomniejszonych postów obok siebie */
+    .insta-embed-grid {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .insta-embed-col {
+      flex: 1;
+      min-width: 0;
+      /* Kontrolowana wysokość dla pomniejszonych elementów */
+      height: 380px; 
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    /* Trik skalujący: zmniejsza posty optycznie, by zmieściły się w 4 kolumnach */
+    .insta-embed-col .instagram-media {
+      transform: scale(0.72);
+      transform-origin: top left;
+      width: 138% !important; /* Kompensacja zwężenia przez skalowanie */
+      margin: 0 !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+
+    /* Kontener kafelka – ustawiamy sztywny format pionowy 3:4 i ucina całą resztę */
+.insta-embed-col {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  width: 100%;
+  height: 430px !important;      /* Sztywna wysokość – kafelek nie rozciąga się na szerokich ekranach */
+  max-height: 410px !important;  /* Gwarancja, że wysokość nie przekroczy tej linii */
+  overflow: hidden !important;   /* Bezpardonowo tnie wszystko, co wystaje poza kadr */
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  background-color: #fff;
+}
+
+/* Płynne uniesienie całego kafelka przy najechaniu */
+.insta-embed-col:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Nieco mocniejszy cień dla efektu uniesienia */
+}
+
+/* Wewnętrzna ramka z efektem rozjaśnienia (opacity / filter) */
+.insta-embed-col .instagram-media {
+  position: absolute !important;
+  top: -65px !important;       /* Chowa górny pasek profilu */
+  left: 50% !important;
+  transform: translateX(-50%) scale(1.05) !important;
+  transform-origin: top center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  transition: transform 0.3s ease !important; /* Płynna animacja powiększenia */
+}
+
+
+/* --- EFEKT POWIĘKSZENIA (ZOOM) PO NAJECHANIU --- */
+.insta-embed-col:hover .instagram-media {
+  transform: translateX(-50%) scale(1.07) !important; /* Powiększa zdjęcie wewnątrz kafelka */
+}
+
+/* ---  EFEKT PRZYCIEMNIENIA --- */
+/* Przyciemnia post, gdy najeżdżasz myszką na kafelkę */
+.insta-embed-col:hover .instagram-media {
+  filter: brightness(0.98); /* Ustawia jasność na 75% – idealny balans przyciemnienia */
+}
+
+
+
+/* Styl dla Twoich autorskich ilustracji w sekcji usług */
+.custom-service-img {
+  width: 140px !important;    /* Zwiększamy z 90px do 125px (możesz dopasować np. 120px - 140px) */
+  height: auto !important;     /* Auto sprawia, że zachowuje idealne proporcje */
+  max-width: none !important;  
+  display: inline-block !important;
+  margin-bottom: 15px;         /* Odstęp od nagłówka */
+  transition: transform 0.3s ease;
+}
+
+/* Opcjonalnie: bardzo delikatne powiększenie ilustracji przy najechaniu */
+.iconfont-wrapper:hover .custom-service-img {
+  transform: scale(1.08);
+}

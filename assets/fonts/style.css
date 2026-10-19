@@ -3,3 +3,9 @@
    font-display: swap;
    src: url('Dreaming_Outloud_Script/Dreaming-Outloud-Script.otf');
 }
+
+@font-face {
+   font-family: 'Dreaming-Outloud-Sans';
+   font-display: swap;
+   src: url('Dreaming_Outloud_Sans/Dreaming-Outloud-Sans.otf');
+}
