@@ -421,8 +421,8 @@
     max-width: 320px !important; 
     
     /* KLUCZOWE: Ustawiamy nieco mniejszą wysokość i blokujemy widoczne tło poza krawędzią */
-    height: 420px !important;      /* Możesz delikatnie zmniejszyć np. do 400px, jeśli chcesz ciut mocniej uciąć dół */
-    max-height: 420px !important;
+    height: 450px !important;      /* Możesz delikatnie zmniejszyć np. do 400px, jeśli chcesz ciut mocniej uciąć dół */
+    max-height: 450px !important;
     overflow: hidden !important;   /* Tnie wszystko, co wystaje poza dolną krawędź karty (w tym biały pasek) */
     
     margin-bottom: 20px !important;
