@@ -407,7 +407,9 @@
   box-shadow: none !important;
 }
 
-/* --- WIDOK MOBILNY (JEDEN POD DRUGIM) --- */
+/* ==========================================================
+   --- WIDOK MOBILNY (TELEFONY PONIŻEJ 768px) ---
+   ========================================================== */
 @media (max-width: 767.98px) {
   .insta-embed-grid {
     flex-direction: column !important;
@@ -416,14 +418,14 @@
 
   .insta-embed-col {
     width: 100% !important;
-    max-width: 320px !important; /* Wygodna szerokość na telefonie */
+    max-width: 320px !important; 
+    
+    /* KLUCZOWE: Ustawiamy nieco mniejszą wysokość i blokujemy widoczne tło poza krawędzią */
+    height: 420px !important;      /* Możesz delikatnie zmniejszyć np. do 400px, jeśli chcesz ciut mocniej uciąć dół */
+    max-height: 420px !important;
+    overflow: hidden !important;   /* Tnie wszystko, co wystaje poza dolną krawędź karty (w tym biały pasek) */
+    
     margin-bottom: 20px !important;
-  }
-}
-
-@media (max-width: 767px) {
-  .instagram-media {
-    padding-bottom: 0 !important; /* Wyczyszczenie dolnego paddingu głównego kontenera, który tworzy ten pasek */
   }
 }
 
