@@ -286,158 +286,138 @@
       width: 100%;
     }
 
-    /* Tytuł */
-    .insta-title {
-      font-family: 'Dreaming-Outloud-Sans','Caveat', cursive;
-      font-size: 2.4rem;
-      color: #4A372E;
-      text-transform: uppercase;
-      line-height: 1.1;
-      margin-bottom: 25px;
+   /* Tytuł - responsywny dzięki clamp() */
+  .insta-title {
+    font-family: 'Dreaming-Outloud-Sans','Caveat', cursive;
+    /* Skaluje się płynnie: min 1.8rem na małym telefonie, rośnie wraz z ekranem do max 2.4rem na komputerze */
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: #4A372E;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 25px;
+  }
+
+  /* Kontener dla odręcznego okręgu */
+  .insta-handle-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 15px !important;
+  }
+
+  /* Link tekstowy - również responsywny */
+  .insta-handle-link {
+    font-family: 'Poppins', sans-serif;
+    /* Płynne dopasowanie wielkości handle'a na telefonach i komputerach */
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    color: #4A372E;
+    text-decoration: none;
+    position: relative;
+    z-index: 2;
+    padding: 8px 22px;
+    display: inline-block;
+  }
+
+  /* SVG Odręcznego Okręgu */
+  .hand-drawn-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115%;
+    height: 130%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .hand-drawn-svg path {
+    fill: none;
+    stroke: #F4B72F;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    
+    animation: drawCirclePlynny 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+  }
+
+  @keyframes drawCirclePlynny {
+    0% {
+      stroke-dashoffset: 500;
+      opacity: 0;
     }
-
-    /* Kontener dla odręcznego okręgu */
-    .insta-handle-wrapper {
-      position: relative;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 5px;
-      margin-bottom: 15px !important;
+    15% {
+      opacity: 1;
     }
-
-    /* Link tekstowy */
-    .insta-handle-link {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.1rem;
-      color: #4A372E;
-      text-decoration: none;
-      position: relative;
-      z-index: 2;
-      padding: 8px 22px;
-      display: inline-block;
+    60% {
+      stroke-dashoffset: 0;
+      opacity: 1;
     }
-
-    /* SVG Odręcznego Okręgu */
-    .hand-drawn-svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 115%;
-      height: 130%;
-      pointer-events: none;
-      z-index: 1;
+    85% {
+      stroke-dashoffset: 0;
+      opacity: 1;
     }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 0;
+    }
+  }
 
-.hand-drawn-svg path {
-  fill: none;
-  stroke: #F4B72F;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  
-  /* Używamy nowej, dużej skali, aby precyzyjnie kontrolować rysowanie */
-  stroke-dasharray: 500; /* Długość linii */
-  stroke-dashoffset: 500; /* Startujemy z w pełni ukrytą linią */
-  
-  /* PŁYNNA ANIMACJA: dodana płynność ruchu dla cyklu (cubic-bezier) */
-  animation: drawCirclePlynny 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-}
-
-/* NOWA, PRECYZYJNA DEFINICJA ANIMACJI */
-@keyframes drawCirclePlynny {
-  0% {
-    stroke-dashoffset: 500; /* W pełni ukryty */
-    opacity: 0;
-  }
-  15% {
-    opacity: 1; /* Płynne wejście przezroczystości */
-  }
-  
-  /* KLUCZ: Płynne rysowanie i ZAMYKANIE elipsy */
-  60% {
-    stroke-dashoffset: 0; /* Tutaj elipsa zamyka się PŁYNNIE bez skoku */
-    opacity: 1;
-  }
-  
-  /* Trwanie i znikanie przed pętlą */
-  85% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    opacity: 0; /* Znika przed restartem */
-  }
-}
-
- /* --- SIATKA POSTÓW NA KOMPUTERZE (3 KOLUMNY OBOK SIEBIE) --- */
+/* --- SIATKA POSTÓW --- */
 .insta-embed-grid {
   display: flex !important;
-  gap: 15px !important;
+  gap: 20px !important;
   width: 100% !important;
+  justify-content: center;
 }
 
 /* --- KONTENER KAFELKA --- */
 .insta-embed-col {
   flex: 1;
-  min-width: 0;
-  position: relative;
-  width: 100%;
-  height: 330px !important;      /* Sztywna wysokość kafelka na komputerze */
-  max-height: 330px !important;  
-  overflow: hidden !important;   /* Tnie wszystko poza kadrem */
+  max-width: 300px;             /* Maksymalna szerokość mniejszego kafelka */
+  background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  background-color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;             /* Zaokrąglenie rogów karty i przycinanie standardowych rogów ramki IG */
+  position: relative;
+  
+  /* PŁYNNE PRZEJŚCIE DLA EFEKTU HOVER */
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* NOWE LINIJE */
 }
 
-/* Płynne uniesienie całego kafelka przy najechaniu */
+/* --- EFEKT PO NAJECHANIU (HOVER) NA CAŁY KAFELEK --- */
 .insta-embed-col:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-5px) scale(1.02) !important; /* UNIESIENIE I POWIĘKSZENIE (scale) - NOWE LINIJE */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12) !important; /* MOCNIEJSZY CIEŃ DLA EFEKTU UNIESIENIA - NOWE LINIJE */
+  z-index: 10;                     /* UNIKANIE KOLIZJI KRAWĘDZI SĄSIEDNICH KAFELKÓW - NOWE LINIJE */
 }
 
-/* --- WEWNĘTRZNA RAMKA INSTAGRAMA --- */
+/* --- ORYGINALNA RAMKA INSTAGRAMA (POMNIEJSZONA) --- */
 .insta-embed-col .instagram-media {
-  position: absolute !important;
-  top: -65px !important;        /* Chowa górny pasek profilu */
-  left: 50% !important;
-  transform: translateX(-50%) scale(1.05) !important; /* Bazowe dopasowanie */
-  transform-origin: top center !important;
   width: 100% !important;
-  min-width: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
+  min-width: unset !important;
+  max-width: 100% !important;
   margin: 0 !important;
-  transition: transform 0.3s ease, filter 0.3s ease !important; /* Płynne animacje */
+  border: none !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
 }
 
-/* --- EFEKTY PO NAJECHANIU (ZOOM + PRZYCIEMNIENIE) --- */
-.insta-embed-col:hover .instagram-media {
-  transform: translateX(-50%) scale(1.08) !important; /* Subtelny zoom */
-  filter: brightness(0.92) !important;                /* Delikatne przyciemnienie */
-}
-
-
-/* ==========================================================
-   --- WIDOK MOBILNY (TELEFONY PONIŻEJ 768px) ---
-   Zapewnia układ postów jeden pod drugim i ostrość grafik
-   ========================================================== */
+/* --- WIDOK MOBILNY (JEDEN POD DRUGIM) --- */
 @media (max-width: 767.98px) {
   .insta-embed-grid {
-    display: block !important; /* Układa elementy blokowo */
-    width: 100% !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 
   .insta-embed-col {
     width: 100% !important;
-    max-width: 340px !important; /* Szerokość kafelka na telefonie */
-    height: 360px !important;    /* Wysokość kafelka w pionie */
-    max-height: 360px !important;
-    margin: 0 auto 20px auto !important; /* Środkuje kafelek i robi przerwę pod nim */
+    max-width: 320px !important; /* Wygodna szerokość na telefonie */
+    margin-bottom: 20px !important;
   }
 }
 
