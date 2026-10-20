@@ -372,85 +372,80 @@
   }
 }
 
- /* Siatka 4 pomniejszonych postów obok siebie */
-    .insta-embed-grid {
-      display: flex;
-      gap: 10px;
-      width: 100%;
-    }
+ /* --- SIATKA POSTÓW NA KOMPUTERZE (3 KOLUMNY OBOK SIEBIE) --- */
+.insta-embed-grid {
+  display: flex !important;
+  gap: 15px !important;
+  width: 100% !important;
+}
 
-    .insta-embed-col {
-      flex: 1;
-      min-width: 0;
-      /* Kontrolowana wysokość dla pomniejszonych elementów */
-      height: 380px; 
-      overflow: hidden;
-      border-radius: 8px;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    /* Trik skalujący: zmniejsza posty optycznie, by zmieściły się w 4 kolumnach */
-    .insta-embed-col .instagram-media {
-      transform: scale(0.72);
-      transform-origin: top left;
-      width: 138% !important; /* Kompensacja zwężenia przez skalowanie */
-      margin: 0 !important;
-      border: none !important;
-      border-radius: 0 !important;
-      box-shadow: none !important;
-    }
-
-    /* Kontener kafelka – ustawiamy sztywny format pionowy 3:4 i ucina całą resztę */
+/* --- KONTENER KAFELKA --- */
 .insta-embed-col {
   flex: 1;
   min-width: 0;
   position: relative;
   width: 100%;
-  height: 430px !important;      /* Sztywna wysokość – kafelek nie rozciąga się na szerokich ekranach */
-  max-height: 410px !important;  /* Gwarancja, że wysokość nie przekroczy tej linii */
-  overflow: hidden !important;   /* Bezpardonowo tnie wszystko, co wystaje poza kadr */
+  height: 330px !important;      /* Sztywna wysokość kafelka na komputerze */
+  max-height: 330px !important;  
+  overflow: hidden !important;   /* Tnie wszystko poza kadrem */
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0,0,0,0.06);
   background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Płynne uniesienie całego kafelka przy najechaniu */
 .insta-embed-col:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Nieco mocniejszy cień dla efektu uniesienia */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-/* Wewnętrzna ramka z efektem rozjaśnienia (opacity / filter) */
+/* --- WEWNĘTRZNA RAMKA INSTAGRAMA --- */
 .insta-embed-col .instagram-media {
   position: absolute !important;
-  top: -65px !important;       /* Chowa górny pasek profilu */
+  top: -65px !important;        /* Chowa górny pasek profilu */
   left: 50% !important;
-  transform: translateX(-50%) scale(1.05) !important;
+  transform: translateX(-50%) scale(1.05) !important; /* Bazowe dopasowanie */
   transform-origin: top center !important;
   width: 100% !important;
   min-width: 0 !important;
   border: none !important;
   box-shadow: none !important;
   margin: 0 !important;
-  transition: transform 0.3s ease !important; /* Płynna animacja powiększenia */
+  transition: transform 0.3s ease, filter 0.3s ease !important; /* Płynne animacje */
 }
 
-
-/* --- EFEKT POWIĘKSZENIA (ZOOM) PO NAJECHANIU --- */
+/* --- EFEKTY PO NAJECHANIU (ZOOM + PRZYCIEMNIENIE) --- */
 .insta-embed-col:hover .instagram-media {
-  transform: translateX(-50%) scale(1.07) !important; /* Powiększa zdjęcie wewnątrz kafelka */
-}
-
-/* ---  EFEKT PRZYCIEMNIENIA --- */
-/* Przyciemnia post, gdy najeżdżasz myszką na kafelkę */
-.insta-embed-col:hover .instagram-media {
-  filter: brightness(0.98); /* Ustawia jasność na 75% – idealny balans przyciemnienia */
+  transform: translateX(-50%) scale(1.08) !important; /* Subtelny zoom */
+  filter: brightness(0.92) !important;                /* Delikatne przyciemnienie */
 }
 
 
+/* ==========================================================
+   --- WIDOK MOBILNY (TELEFONY PONIŻEJ 768px) ---
+   Zapewnia układ postów jeden pod drugim i ostrość grafik
+   ========================================================== */
+@media (max-width: 767.98px) {
+  .insta-embed-grid {
+    display: block !important; /* Układa elementy blokowo */
+    width: 100% !important;
+  }
 
-/* Styl dla Twoich autorskich ilustracji w sekcji usług */
+  .insta-embed-col {
+    width: 100% !important;
+    max-width: 340px !important; /* Szerokość kafelka na telefonie */
+    height: 360px !important;    /* Wysokość kafelka w pionie */
+    max-height: 360px !important;
+    margin: 0 auto 20px auto !important; /* Środkuje kafelek i robi przerwę pod nim */
+  }
+}
+
+
+
+
+
+/* Styl dla Twoich autorskich ilustracji-ikon w sekcji usług */
 .custom-service-img {
   width: 140px !important;    /* Zwiększamy z 90px do 125px (możesz dopasować np. 120px - 140px) */
   height: auto !important;     /* Auto sprawia, że zachowuje idealne proporcje */

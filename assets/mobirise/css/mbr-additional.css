@@ -20,6 +20,12 @@ body {
 .display-2 > .mbr-iconfont {
   font-size: 1.75rem;
 }
+.display-3 {
+  font-family: 'Dreaming-Outloud-Sans';
+  Text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
 .display-4 {
   font-family: 'Poppins', sans-serif;
   font-size: 0.83rem;
@@ -1085,6 +1091,7 @@ a {
   }
 }
 .cid-tIgqpbstXT {
+
   padding-top: 6rem;
   padding-bottom: 10rem;
   background-image: url("../../../assets/images/baner-www-agnesik-2000x1333.png");
