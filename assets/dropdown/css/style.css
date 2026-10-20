@@ -421,6 +421,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .instagram-media {
+    padding-bottom: 0 !important; /* Wyczyszczenie dolnego paddingu głównego kontenera, który tworzy ten pasek */
+  }
+}
+
 
 
 
