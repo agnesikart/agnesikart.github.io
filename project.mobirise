@@ -3,8 +3,8 @@
     "name": "Agnesik ART • Agnieszka Kowalec",
     "currentPage": "index.html",
     "theme": {
-      "name": "mobirise5",
-      "title": "Mobirise 5",
+      "name": "agnesik",
+      "title": "agnesik2026",
       "styling": {
         "primaryColor": "#353535",
         "secondaryColor": "#ffe161",
@@ -131,11 +131,11 @@
       "settings": {
         "main": true,
         "title": "Agnesik ART • Agnieszka Kowalec",
-        "meta_descr": "Kartki okolicznościowe • Ilustracje • Zaproszenia • Projekty graficzne • Stwórzmy razem coś ładnego!",
+        "meta_descr": "Grafika • Branding • Ilustracje • Kartki • Zaproszenia • Projekty pełne koloru i charakteru",
         "header_custom": "",
         "footer_custom": "",
         "html_before": "",
-        "meta_image": "@PROJECT_PATH@/assets/images/img-3099-2000x2000.jpg"
+        "meta_image": "@PROJECT_PATH@/assets/images/Sygnet_03.jpg"
       },
       "components": [
         {
