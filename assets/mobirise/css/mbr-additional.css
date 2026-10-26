@@ -5169,7 +5169,7 @@ a {
   }
 }
 .cid-tImFpzXtcv {
-  padding-top: 4rem;
+  padding-top: 1rem;
   padding-bottom: 0rem;
   background-color: #ffffff;
 }
@@ -5298,6 +5298,7 @@ a {
   background: none !important;
   z-index: 1 !important;
   padding: 4px 12px !important;
+  margin-top: 0.4rem;
 }
 
 .highlight-oval-pink::after {
@@ -6132,7 +6133,7 @@ section[class*="gallery"] .item-wrapper img {
 /* --- 2. SEKCJA Z LISTĄ (Wycentrowanie i zbliżenie kolumn) --- */
 
 /* Wyśrodkowanie całego wiersza z kolumnami */
-.cid-uNUkHRmeL6 .row.justify-content-center {
+.cid-uNUkHRmeL6 .row .justify-content-center {
   justify-content: center !important;
 }
 
@@ -7156,14 +7157,14 @@ section[class*="gallery"] .item-wrapper img {
 
 /* KRÓTKIE LINIE POD TYTUŁEM PODSTRON */
 /* Branding */
-#content4-2z .wavy-underline {
+.content4-2z .wavy-underline {
   display: inline-block !important;
   position: relative !important;
   padding-bottom: 20px !important; /* Space between title and wavy line */
 }
 
-#content4-2z .wavy-underline::after {
-content: "" !important;
+.content4-2z .wavy-underline::after {
+  content: "" !important;
   position: absolute !important;
   left: 50% !important;
   bottom: -4px !important;
