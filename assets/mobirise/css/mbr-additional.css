@@ -35,11 +35,31 @@ body {
   font-size: 1.0375rem;
 }
 .display-5 {
+  font-family: 'Dreaming-Outloud-Sans','Poppins', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1 !important;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.display-5 span{
+  font-weight: bold !important;
+    /* Magia białych prostokątów przylegających do tekstu */
+    background-color: #ffffff;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    
+    /* Marginesy wewnętrzne (odstęp białego tła od liter) */
+    padding: 0px 0px;
+}
+
+.display-6 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   text-transform: uppercase;
 }
+
 .display-5 > .mbr-iconfont {
   font-size: 2rem;
 }
@@ -1771,8 +1791,8 @@ a {
   }
 }
 .cid-tImDrNz8TC {
-  padding-top: 5rem;
-  padding-bottom: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-tImDrNz8TC .mbr-fallback-image.disabled {
@@ -1806,9 +1826,14 @@ a {
 }
 .cid-uNUezvUmxF {
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem !important;
   background: #f5c250;
 }
+
+.cid-uNUezvUmxF h3{
+  margin-bottom: 1.5rem !important;
+}
+
 .cid-uNUezvUmxF .mbr-fallback-image.disabled {
   display: none;
 }
@@ -1821,10 +1846,7 @@ a {
   position: absolute;
   top: 0;
 }
-.cid-uNUezvUmxF .list-group-item {
-  background-color: transparent;
-  padding: .5rem 3.25rem;
-}
+
 .cid-uNUezvUmxF .plan-body {
   padding-bottom: 2rem;
 }
@@ -1840,23 +1862,9 @@ a {
   word-break: break-word;
   background-color: #ffffff;
 }
-.cid-uNUezvUmxF .plan .list-group-item {
-  position: relative;
-  justify-content: center;
-  border: 0;
-}
-.cid-uNUezvUmxF .plan .list-group-item::after {
-  position: absolute;
-  bottom: 1px;
-  left: 25%;
-  width: 50%;
-  height: 1px;
-  content: "";
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.cid-uNUezvUmxF .plan .list-group-item:last-child::after {
-  display: none;
-}
+
+
+
 @media (max-width: 991px) {
   .cid-uNUezvUmxF .plan {
     margin-bottom: 2rem;
@@ -1865,6 +1873,244 @@ a {
 .cid-uNUezvUmxF UL {
   text-align: center;
 }
+
+/* ==========================================
+   NOWOCZESNY I ELEGANCKI CENNIK (#pricing2-ar)
+   ========================================== */
+
+/* 1. Eleganckie, czyste karty zamiast kreskówkowych kształtów */
+#pricing2-ar .plan {
+  background-image: url("../../../assets/images/banner-tlo-kratka.png");
+  border-radius: 16px !important; /* Łagodne, nowoczesne zaokrąglenie rogów */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important; /* Subtelna, elegancka ramka */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important; /* Miękki, głęboki cień */
+  padding: 20px 20px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+#pricing2-ar .plan:hover {
+  transform: translateY(-5px) !important; /* Gładkie uniesienie w górę bez kołysania */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 2. Artystyczny podkład pędzla pod ceną (to, co wyglądało fajnie w środku) */
+#pricing2-ar .price-term {
+  display: inline-block !important;
+  position: relative !important;
+  font-weight: bold !important;
+  color: #1b1b1b !important;
+  margin-bottom: 25px !important;
+  z-index: 1 !important;
+  padding: 0 8px !important;
+}
+
+#pricing2-ar .price-term::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -6px !important;
+  right: -6px !important;
+  bottom: 2px !important;
+  top: 45% !important;
+  background-color: #F4B72F !important;
+  opacity: 0.55 !important;
+  z-index: -1 !important;
+  border-radius: 12px 6px 10px 8px / 6px 12px 8px 10px !important;
+  transform: rotate(-1.5deg) !important;
+}
+
+/* 3. Przejrzysta lista z eleganckimi, drobnymi akcentami */
+#pricing2-ar .list-group {
+  list-style: none !important;
+  padding-left: 0 !important;
+  justify-content: center !important;
+}
+
+/* Wyśrodkowanie kontenera listy wewnątrz karty */
+#pricing2-ar .justify-center-list {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Dopasowanie szerokości listy do tekstu, by tekst pozostał wyrównany do lewej */
+#pricing2-ar .list-group {
+  display: inline-block !important;
+  width: fit-content !important;
+  text-align: left !important;
+  margin: 0 auto !important;
+}
+
+#pricing2-ar .list-group-item {
+  position: relative !important;
+  background: transparent !important;
+  border: none !important;
+  padding-left: 26px !important;
+  padding-right: 10px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  text-align: left !important;
+  font-size: 0.95rem !important;
+}
+
+#pricing2-ar .list-group-item:last-child {
+  border-bottom: none !important;
+}
+
+/* Drobny, zgrabny żółty znacznik przy punktach */
+#pricing2-ar .list-group-item::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 2px !important;
+  top: 18px !important;
+  width: 7px !important;
+  height: 7px !important;
+  background-color: #F07F1D !important;
+  border-radius: 50% !important;
+}
+
+
+/* ==========================================
+   STYL ODRĘCZNEJ TABELI DLA CENNIKA (#pricing2-aa1)
+   ========================================== */
+#pricing2-aa1 {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  background-image: url("../../../assets/images/banner-cennik.png");
+}
+
+#pricing2-aa1 .plan-body{
+  margin-top: 1rem !important;
+}
+
+#pricing2-aa1 .hand-drawn-table {
+  width: 100% !important;
+  max-width: 450px !important;
+  margin: 0 auto !important;
+  border-collapse: collapse !important;
+  text-align: left !important;
+}
+
+/* Podstawa wiersza */
+#pricing2-aa1 .hand-drawn-table tr {
+  border-bottom: none !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom center !important;
+  background-size: 100% 12px !important;
+  transition: background-color 0.2s ease;
+}
+
+#pricing2-aa1 .price-term {
+  display: inline-block !important;
+  position: relative !important;
+  font-weight: bold !important;
+  color: #35200E !important;
+  margin-bottom: 0px !important;
+  z-index: 1 !important;
+  padding: 0 0px !important;
+}
+
+#pricing2-aa1 .price-term::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -6px !important;
+  right: -6px !important;
+  bottom: 2px !important;
+  top: 45% !important;
+  background-color: #F4B72F !important;
+  opacity: 0.55 !important;
+  z-index: -1 !important;
+  border-radius: 12px 6px 10px 8px / 6px 12px 8px 10px !important;
+  transform: rotate(-1.5deg) !important;
+}
+
+
+
+/* 1. Linia pod pierwszym wierszem (lekkie wygięcie w górę na środku) */
+#pricing2-aa1 .hand-drawn-table tr:nth-child(1) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 12' preserveAspectRatio='none'%3E%3Cpath d='M3,7 C100,2 200,9 300,5 C350,3 385,8 397,6' fill='none' opacity='0.85' stroke='%236C7838' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+}
+
+/* 2. Linia pod drugim wierszem (nieco bardziej pofalowana) */
+#pricing2-aa1 .hand-drawn-table tr:nth-child(2) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 12' preserveAspectRatio='none'%3E%3Cpath d='M2,5 C90,9 180,2 270,8 C330,4 370,10 398,5' fill='none' opacity='0.85' stroke='%236C7838' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+}
+
+/* 3. Linia pod trzecim wierszem (łuk w drugą stronę) */
+#pricing2-aa1 .hand-drawn-table tr:nth-child(3) {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 12' preserveAspectRatio='none'%3E%3Cpath d='M4,8 C110,4 210,10 310,6 C350,4 380,9 396,7' fill='none' opacity='0.85' stroke='%236C7838' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+}
+
+/* Ostatni wiersz bez linii */
+#pricing2-aa1 .hand-drawn-table tr:last-child {
+  background-image: none !important;
+}
+
+#pricing2-aa1 .hand-drawn-table tr:last-child {
+  border-bottom: none !important;
+}
+
+/* ==========================================
+   JEDNA DŁUGA, PIONOWA ODRĘCZNA LINIA
+   ========================================== 
+
+/* Pozycjonowanie bazy tabeli 
+#pricing2-aa1 .hand-drawn-table {
+  position: relative !important;
+}
+
+/* Jedna ciągła, odręczna kreska przez całą wysokość tabeli 
+#pricing2-aa1 .hand-drawn-table::after {
+  content: "" !important;
+  position: absolute !important;
+  top: 5px !important;
+  bottom: 5px !important;
+  left: 50% !important; /* Idealny środek tabeli 
+  width: 12px !important;
+  transform: translateX(-50%) !important;
+  pointer-events: none !important;
+
+  /* Długa, płynnie pofalowana linia w formacie SVG 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 300' preserveAspectRatio='none'%3E%3Cpath d='M6,2 C3,60 9,120 4,180 C8,240 3,280 6,298' fill='none' stroke='%236C7838' stroke-width='3.2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Zapewnienie równego odstępu dla tekstu po obu stronach pionowej linii 
+#pricing2-aa1 .hand-drawn-table td:first-child {
+  padding-right: 25px !important;
+}
+
+#pricing2-aa1 .hand-drawn-table td:last-child {
+  padding-left: 25px !important;
+} */
+
+
+/* Podstawowy wygląd komórek (tylko padding góra/dół) */
+#pricing2-aa1 .hand-drawn-table td {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  font-size: 1rem !important;
+  color: #1b1b1b !important;
+  background: transparent !important;
+}
+
+/* Komórka po lewej (liczba osób) */
+#pricing2-aa1 .table-item-left {
+  text-align: left !important;
+  font-weight: 500 !important;
+  padding-left: 45px !important;  /* Margines od LEWEJ zewnętrznej krawędzi (zwiększ/zmniejsz według uznania) */
+  padding-right: 25px !important; /* Margines od środkowej linii */
+}
+
+/* Komórka po prawej (cena) */
+#pricing2-aa1 .table-item-right {
+  text-align: right !important;
+  font-weight: bold !important;
+  padding-left: 25px !important;  /* Margines od środkowej linii */
+  padding-right: 45px !important; /* Margines od PRAWEJ zewnętrznej krawędzi (zwiększ/zmniejsz według uznania) */
+}
+
+
 .cid-uNUgyCMhwX {
   padding-top: 0rem;
   padding-bottom: 3rem;
@@ -1872,7 +2118,7 @@ a {
 }
 .cid-uNUgyCMhwX .line {
   background-color: #ffffff;
-  align: center;
+  justify-content: center;
   height: 2px;
   margin: 0 auto;
 }
@@ -1921,6 +2167,7 @@ a {
   padding-top: 0rem;
   padding-bottom: 0rem;
   background-color: #ffffff;
+  
 }
 .cid-uNUhKgdELi .mbr-fallback-image.disabled {
   display: none;
@@ -1934,9 +2181,10 @@ a {
   position: absolute;
   top: 0;
 }
+
 @media (max-width: 991px) {
   .cid-uNUhKgdELi .image-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 0%;
   }
 }
 .cid-uNUhKgdELi .row {
@@ -1944,6 +2192,9 @@ a {
 }
 .cid-uNUhKgdELi img {
   width: 100%;
+  max-height: 140px; /* Dostosuj tę wartość (np. 60px, 80px, 100px) w zależności od tego, jak mocno chcesz uciąć górę i dół */
+  object-fit: cover;
+  object-position: center;
 }
 .cid-uNUdQR0hqI {
   padding-top: 0rem;
@@ -1963,7 +2214,7 @@ a {
   top: 0;
 }
 .cid-uNUdQR0hqI .item {
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 }
 .cid-uNUdQR0hqI .item-wrapper {
   height: 100%;
@@ -1992,9 +2243,35 @@ a {
   background-color: #1b1b1b;
   transition: 0.2s;
 }
+
 .cid-uNUdQR0hqI .item-wrapper:hover .icon-wrapper {
   opacity: 0.7;
 }
+
+.cid-uNUkHRmeL602 .item-wrapper .icon-wrapper {
+  pointer-events: none;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  color: #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #1b1b1b;
+  transition: 0.2s;
+}
+
+.cid-uNUkHRmeL602 .item-wrapper:hover .icon-wrapper {
+  opacity: 0.7;
+}
+
 .cid-uNUdQR0hqI .carousel-control,
 .cid-uNUdQR0hqI .close {
   background: #1b1b1b;
@@ -2215,7 +2492,7 @@ a {
 }
 .cid-uOgXnppBG7 {
   padding-top: 0rem;
-  padding-bottom: 6rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-uOgXnppBG7 .mbr-fallback-image.disabled {
@@ -4893,7 +5170,7 @@ a {
 }
 .cid-tImFpzXtcv {
   padding-top: 4rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-tImFpzXtcv .mbr-fallback-image.disabled {
@@ -4926,9 +5203,9 @@ a {
   top: 0;
 }
 .cid-uNO7mJkeMi {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  background: #f5c250;
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  background-image: url("../../../assets/images/banner-tlo-kratka.png");
 }
 .cid-uNO7mJkeMi .mbr-fallback-image.disabled {
   display: none;
@@ -4946,11 +5223,16 @@ a {
   background-color: transparent;
   padding: .5rem 3.25rem;
 }
+
+.cid-uNO7mJkeMi .justify-center-list {
+  justify-content: center !important;
+}
+
 .cid-uNO7mJkeMi .plan-body {
   padding-bottom: 2rem;
 }
 .cid-uNO7mJkeMi .plan-header {
-  padding-top: 2rem;
+  padding-top: 0rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -4959,22 +5241,313 @@ a {
 }
 .cid-uNO7mJkeMi .plan {
   word-break: break-word;
-  background-color: #ffffff;
+  background-color: transparent !important; 
 }
+
+.cid-uNO7mJkeMi .plan-list {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Główny kontener listy – wyśrodkowany na stronie o stałej szerokości */
+.cid-uNO7mJkeMi .list-group {
+  display: block !important;
+  text-align: left !important;
+  width: 100% !important;
+  max-width: 770px !important;       /* Szerokość całego bloku listy (możesz dostosować) */
+  margin-left: auto !important;
+  margin-right: auto !important;     /* Centruje całą listę na środku strony */
+}
+
+/* Wiersz listy */
+.cid-uNO7mJkeMi .list-group-item {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+
+/* Styl dla idealnie dopasowanych, średnich nieregularnych żółtych okręgów */
+.cid-uNO7mJkeMi .badge-num {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 33px !important;            /* Ustawione na 33px (idealny balans) */
+  height: 33px !important;           /* Ustawione na 33px */
+  font-size: 15px !important;        /* Odpowiednia wielkość cyfry w środku */
+  background-color: #f5c250 !important;
+  color: #35200E !important;
+  font-weight: 600 !important;
+  
+  /* Nieregularny, organiczny kształt */
+  border-radius: 55% 45% 60% 40% / 50% 60% 40% 50% !important; 
+  
+  margin-right: 14px !important;     /* Odstęp od tekstu */
+  flex-shrink: 0;
+}
+
+
+/* Odręczna, nieregularna elipsa wokół napisu SOCIAL MEDIA (ODROBINĘ WIĘKSZA) */
+.highlight-oval-pink {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important;
+  padding: 4px 12px !important;
+}
+
+.highlight-oval-pink::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;               /* Odrobinę większy od góry (było -4px) */
+  left: -16px !important;              /* Odrobinę większy z lewej (było -8px) */
+  width: calc(100% + 25px) !important; /* Odrobinę większy wzdłuż (było +16px) */
+  height: calc(100% + 25px) !important;/* Odrobinę większy w pionie (było +8px) */
+  z-index: -1 !important;
+
+  /* SVG z odręcznym, nieregularnym okręgiem (pętlą) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M 15,30 C 10,10 60,3 110,4 C 160,5 192,12 190,32 C 188,50 140,56 85,55 C 30,54 8,42 18,24 C 25,12 70,6 120,5' stroke='%23AF3051' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-oval-lightpink {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important;
+  padding: 4px 12px !important;
+}
+
+.highlight-oval-lightpink::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;               /* Odrobinę większy od góry (było -4px) */
+  left: -16px !important;              /* Odrobinę większy z lewej (było -8px) */
+  width: calc(100% + 25px) !important; /* Odrobinę większy wzdłuż (było +16px) */
+  height: calc(100% + 25px) !important;/* Odrobinę większy w pionie (było +8px) */
+  z-index: -1 !important;
+
+  /* SVG z odręcznym, nieregularnym okręgiem (pętlą) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M 15,30 C 10,10 60,3 110,4 C 160,5 192,12 190,32 C 188,50 140,56 85,55 C 30,54 8,42 18,24 C 25,12 70,6 120,5' stroke='%23FFB7C7' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-oval-yellow {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important;
+  padding: 4px 12px !important;
+}
+
+.highlight-oval-yellow::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;               /* Odrobinę większy od góry (było -4px) */
+  left: -16px !important;              /* Odrobinę większy z lewej (było -8px) */
+  width: calc(100% + 25px) !important; /* Odrobinę większy wzdłuż (było +16px) */
+  height: calc(100% + 25px) !important;/* Odrobinę większy w pionie (było +8px) */
+  z-index: -1 !important;
+
+  /* SVG z odręcznym, nieregularnym okręgiem (pętlą) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M 15,30 C 10,10 60,3 110,4 C 160,5 192,12 190,32 C 188,50 140,56 85,55 C 30,54 8,42 18,24 C 25,12 70,6 120,5' stroke='%23F4B72F' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-oval-orange {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important;
+  padding: 4px 12px !important;
+}
+
+.highlight-oval-orange::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;               /* Odrobinę większy od góry (było -4px) */
+  left: -16px !important;              /* Odrobinę większy z lewej (było -8px) */
+  width: calc(100% + 25px) !important; /* Odrobinę większy wzdłuż (było +16px) */
+  height: calc(100% + 25px) !important;/* Odrobinę większy w pionie (było +8px) */
+  z-index: -1 !important;
+
+  /* SVG z odręcznym, nieregularnym okręgiem (pętlą) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M 15,30 C 10,10 60,3 110,4 C 160,5 192,12 190,32 C 188,50 140,56 85,55 C 30,54 8,42 18,24 C 25,12 70,6 120,5' stroke='%23F07F1D' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-oval-green {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important;
+  padding: 4px 12px !important;
+}
+
+.highlight-oval-green::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -14px !important;               /* Odrobinę większy od góry (było -4px) */
+  left: -16px !important;              /* Odrobinę większy z lewej (było -8px) */
+  width: calc(100% + 25px) !important; /* Odrobinę większy wzdłuż (było +16px) */
+  height: calc(100% + 25px) !important;/* Odrobinę większy w pionie (było +8px) */
+  z-index: -1 !important;
+
+  /* SVG z odręcznym, nieregularnym okręgiem (pętlą) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' preserveAspectRatio='none'><path d='M 15,30 C 10,10 60,3 110,4 C 160,5 192,12 190,32 C 188,50 140,56 85,55 C 30,54 8,42 18,24 C 25,12 70,6 120,5' stroke='%236C7838' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* NIEREGULARNE LINIE - PODKREŚLENIA */
+.highlight-line-orange {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important; /* Wynosi tekst warstwę wyżej */
+}
+
+.highlight-line-orange::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -8px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%23F07F1D' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+#pricing2-aa .highlight-line-orange::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -6px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%23F07F1D' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-line-yellow {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important; /* Wynosi tekst warstwę wyżej */
+}
+
+.highlight-line-yellow::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -10px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%23F4B72F' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-line-green {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important; /* Wynosi tekst warstwę wyżej */
+}
+
+.highlight-line-green::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -10px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%236C7838' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+
+.highlight-line-lightpink {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important; /* Wynosi tekst warstwę wyżej */
+  margin-bottom: 1.2rem !important; /* Odstęp od tekstu poniżej */
+}
+
+.highlight-line-lightpink::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -10px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%23FFB7C7' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+.highlight-line-darkpink {
+  position: relative !important;
+  display: inline-block !important;
+  background: none !important;
+  z-index: 1 !important; /* Wynosi tekst warstwę wyżej */
+  margin-bottom: 1.2rem !important; /* Odstęp od tekstu poniżej */
+}
+
+.highlight-line-darkpink::after {
+  content: "" !important;
+  position: absolute !important;
+  left: -8px !important;
+  bottom: -10px !important;            /* Linia zostaje dokładnie tam, gdzie chciałaś */
+  width: calc(100% + 16px) !important;
+  height: 14px !important;
+  z-index: -1 !important;             /* Chowa linię POD tekst */
+  
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 30' preserveAspectRatio='none'><path d='M 3,18 C 50,30 80,2 120,16 C 160,30 180,4 197,14' stroke='%23AF3051' stroke-width='7' fill='none' stroke-linecap='round'/></svg>") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+
 .cid-uNO7mJkeMi .plan .list-group-item {
   position: relative;
   justify-content: center;
+  text-align: left !important;
   border: 0;
 }
 .cid-uNO7mJkeMi .plan .list-group-item::after {
   position: absolute;
   bottom: 1px;
-  left: 25%;
-  width: 50%;
+  left: 0 !important;
+  transform: none !important;
+  width: 100% !important;
   height: 1px;
   content: "";
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.0);
 }
+
 .cid-uNO7mJkeMi .plan .list-group-item:last-child::after {
   display: none;
 }
@@ -4990,7 +5563,6 @@ a {
 }
 .cid-uOhBuomVey .line {
   background-color: #ffffff;
-  align: center;
   height: 2px;
   margin: 0 auto;
 }
@@ -5004,7 +5576,7 @@ a {
 }
 .cid-uOu3RFZBhH {
   padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-uOu3RFZBhH .mbr-section-subtitle {
@@ -5012,7 +5584,7 @@ a {
 }
 .cid-tIsyaTcJtk {
   padding-top: 0rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
 }
 .cid-tIsyaTcJtk .mbr-fallback-image.disabled {
@@ -5056,6 +5628,41 @@ a {
 .cid-tIsyaTcJtk .item.five:before {
   display: none;
 }
+/* ==========================================
+   ORGANICZNE I NIEREGULARNE KSZTAŁTY DLA KROKÓW ZAMÓWIENIA
+   ========================================== */
+
+/* Usunięcie domyślnego, idealnego koła i dodanie organicznego kształtu */
+#features24-46 .icon-box {
+  /* Skomplikowany border-radius dla asymetrycznych krzywych */
+  border-radius: 40% 60% 70% 30% / 60% 30% 70% 40% !important;
+  transition: border-radius 0.4s ease; /* Płynne przejście przy ewentualnym hoverze */
+}
+
+/* Wariacja dla kroku 2, by shapes nie były identyczne */
+#features24-46 .col-lg-3:nth-of-type(2) .icon-box {
+  border-radius: 60% 40% 30% 70% / 40% 70% 30% 60% !important;
+}
+
+/* Wariacja dla kroku 3 */
+#features24-46 .col-lg-3:nth-of-type(3) .icon-box {
+  border-radius: 70% 30% 60% 40% / 50% 60% 40% 50% !important;
+}
+
+/* Wariacja dla kroku 4 */
+#features24-46 .col-lg-3:nth-of-type(4) .icon-box {
+  border-radius: 30% 70% 60% 40% / 50% 40% 60% 50% !important;
+  margin: 0 auto !important;
+}
+
+/* Opcjonalne wyśrodkowanie numeracji wewnątrz nowych kształtów */
+#features24-46 .step-number {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+}
+
 .cid-tIsyaTcJtk .icon-box {
   background: #F4B72F;
   width: 60px;
@@ -5075,6 +5682,184 @@ a {
   top: 50%;
   left: 100%;
 }
+
+/* Wyrównanie listy do lewej wewnątrz nowej lewej kolumny */
+#content13-b1 .plan-list {
+  display: flex !important;
+}
+
+#content13-b1 .list-group {
+  display: block !important;
+  text-align: left !important;
+  width: 100% !important;
+}
+
+/* Kontrola rozmiaru zdjęcia w prawej kolumnie sekcji Social Media */
+#content13-b1 .image-wrapper img {
+  max-height: 30% !important; /* Dostosuj tę wartość (np. 340px - 380px), aby idealnie wyrównać z listą */
+  width: auto !important;        /* Szerokość dopasuje się sama, zachowując proporcje */
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+/* Styl lupy i efektu najazdu w sekcji Social Media (skopiowany z galerii) */
+#content13-b1 .image-wrapper .icon-wrapper {
+  pointer-events: none;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  color: #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #1b1b1b;
+  transition: 0.2s;
+}
+
+#content13-b1 .image-wrapper:hover .icon-wrapper {
+  opacity: 0.7;
+}
+
+#content13-b1 .modal .close {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  width: 60px !important;
+  height: 60px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: #1b1b1b !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 50% !important;
+  opacity: 0.7 !important;
+  z-index: 1050 !important;
+  padding: 0 !important;
+}
+
+/* Styl samego symbolu '×' wewnątrz przycisku, żeby był biały i odpowiednio duży */
+#content13-b1 .modal .close::before {
+  content: "×";
+  font-size: 32px !important;
+  color: #ffffff !important;
+  line-height: 1 !important;
+  font-weight: 300;
+}
+
+/* Zwiększenie krycia do 100% po najechaniu myszką na przycisk zamykania */
+#content13-b1 .modal .close:hover {
+  opacity: 1 !important;
+}
+
+/* Poprawka pozycji lupy i obramowania w sekcji Social Media */
+#content13-b1 .item-wrapper {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  cursor: pointer !important;
+}
+
+#content13-b1 .item-wrapper .icon-wrapper {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* Styl modala (lightboxa) dla sekcji Social Media, dopasowany do galerii */
+#content13-b1 .modal {
+  padding-left: 0 !important;
+  position: fixed;
+  overflow: hidden;
+  padding-right: 0 !important;
+}
+
+#content13-b1 .modal-dialog {
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#content13-b1 .modal-content {
+  border-radius: 0;
+  border: none;
+  background: transparent;
+}
+
+#content13-b1 .modal-body {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content13-b1 .modal-body img {
+  width: 100%;
+  object-fit: contain;
+  max-height: calc(100vh - 1.75rem);
+}
+
+#content13-b1 .carousel {
+  width: 100%;
+}
+
+#content13-b1 .modal-backdrop.in {
+  opacity: 0.8;
+}
+
+#content13-b1 .modal.fade .modal-dialog {
+  transition: margin-top 0.3s ease-out;
+}
+
+#content13-b1 .modal.fade .modal-dialog,
+#content13-b1 .modal.in .modal-dialog {
+  transform: none;
+}
+
+/* Dodatkowo musimy upewnić się, że kontener zdjęcia ma pozycję relative, żeby kółko wiedziało, gdzie się schować */
+#content13-b1 .image-wrapper {
+  position: relative !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  border-radius: 12px;
+}
+
+@media (min-width: 992px) {
+  /* Wyśrodkowanie lewej i prawej kolumny w pionie względem siebie */
+  #content13-b1 .row {
+    display: flex !important;
+    align-items: center !important; /* Sprawia, że lista ląduje idealnie na środku wysokości zdjęcia */
+  }
+
+  /* Zdjęcie po prawej stronie – duże, na określoną szerokość % */
+  #content13-b1 .image-wrapper img {
+    width: 90% !important;        /* Możesz zmienić np. na 85%, 95% lub 100%, aby dostosować wielkość */
+    height: auto !important;      /* Zachowuje naturalne proporcje zdjęcia */
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    display: block !important;
+  }
+
+  /* Wyrównanie bloku listy w lewej kolumnie */
+  #content13-b1 .plan-body {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+
 @media (max-width: 991px) {
   .cid-tIsyaTcJtk .item:before {
     display: none;
@@ -5083,46 +5868,295 @@ a {
     margin-bottom: 2rem;
   }
 }
-.cid-uNUkHRmeL6 {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
-  background-color: #ffffff;
+
+@media (max-width: 991px) {
+  /* Wymuszenie pełnej szerokości i układu jeden pod drugim dla wszystkich kolumn w tej sekcji */
+  #content13-b1 .row > div,
+  #content13-b1 .col-lg-6,
+  #content13-b1 .col-12 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
 }
-.cid-uNUkHRmeL6 .mbr-fallback-image.disabled {
+
+.cid-uNUkHRmeL602 .list-group-item {
+  background-color: transparent;
+  padding: .5rem 3.25rem;
+}
+.cid-uNUkHRmeL602 .plan-body {
+  padding-bottom: 0rem;
+}
+.cid-uNUkHRmeL602 .plan-header {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cid-uNUkHRmeL602 .price {
+  color: #353535;
+}
+.cid-uNUkHRmeL602 .plan {
+  word-break: break-word;
+  background-color: transparent !important; 
+}
+
+.cid-uNUkHRmeL602 .plan-list {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Główny kontener listy – wyśrodkowany na stronie o stałej szerokości */
+.cid-uNUkHRmeL602 .list-group {
+  display: block !important;
+  text-align: left !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 770px !important;       /* Szerokość całego bloku listy (możesz dostosować) */
+  margin-left: auto !important;
+  margin-right: auto !important;     /* Centruje całą listę na środku strony */
+}
+
+/* Wiersz listy */
+.cid-uNUkHRmeL602 .list-group-item {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.cid-uNUkHRmeL602 .justify-center-list {
+  justify-content: center !important;
+}
+
+/* Styl dla idealnie dopasowanych, średnich nieregularnych żółtych okręgów */
+.cid-uNUkHRmeL602 .badge-num {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 33px !important;            /* Ustawione na 33px (idealny balans) */
+  height: 33px !important;           /* Ustawione na 33px */
+  font-size: 15px !important;        /* Odpowiednia wielkość cyfry w środku */
+  background-color: #6C7838 !important;
+  color: #fafafa !important;
+  font-weight: 600 !important;
+  
+  /* Nieregularny, organiczny kształt */
+  border-radius: 55% 45% 60% 40% / 50% 60% 40% 50% !important; 
+  
+  margin-right: 14px !important;     /* Odstęp od tekstu */
+  flex-shrink: 0;
+}
+
+
+.cid-uNUkHRmeL602 .plan .list-group-item {
+  position: relative;
+  justify-content: center;
+  text-align: left !important;
+  border: 0;
+}
+.cid-uNUkHRmeL602 .plan .list-group-item::after {
+  position: absolute;
+  bottom: 1px;
+  left: 0 !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 1px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
+.cid-uNUkHRmeL602 .plan .list-group-item:last-child::after {
   display: none;
 }
-.cid-uNUkHRmeL6 .mbr-fallback-image {
-  display: block;
-  background-size: cover;
-  background-position: center center;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
+@media (max-width: 991px) {
+  .cid-uNO7mJkeMi .plan {
+    margin-bottom: 2rem;
+  }
 }
-.cid-uNUkHRmeL6 ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 2.5rem;
+
+.cid-uNUkHRmeL6 .list-group-item {
+  background-color: transparent;
+  padding: .5rem 3.25rem;
 }
-.cid-uNUkHRmeL6 li {
+.cid-uNUkHRmeL6 .plan-body {
+  padding-bottom: 2rem;
+}
+.cid-uNUkHRmeL6 .plan-header {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cid-uNUkHRmeL6 .price {
+  color: #353535;
+}
+.cid-uNUkHRmeL6 .plan {
+  word-break: break-word;
+  background-color: transparent !important; 
+}
+
+.cid-uNUkHRmeL6 .plan-list {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+/* Główny kontener listy – wyśrodkowany na stronie o stałej szerokości */
+.cid-uNUkHRmeL6 .list-group {
+  display: block !important;
+  text-align: left !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 770px !important;       /* Szerokość całego bloku listy (możesz dostosować) */
+  margin-left: auto !important;
+  margin-right: auto !important;     /* Centruje całą listę na środku strony */
+}
+
+/* Wiersz listy */
+.cid-uNUkHRmeL6 .list-group-item {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.cid-uNUkHRmeL6 .justify-center-list {
+  justify-content: center !important;
+}
+
+.cid-uNUkHRmeL6 .plan .list-group-item {
   position: relative;
-  margin-bottom: 1rem;
+  justify-content: center;
+  text-align: left !important;
+  border: 0;
 }
-.cid-uNUkHRmeL6 ul li::before {
+.cid-uNUkHRmeL6 .plan .list-group-item::after {
   position: absolute;
-  left: -1.6rem;
-  content: "\2022";
-  color: #F4B72F;
-  font-weight: bold;
-  font-size: 2rem;
-  width: 1.6rem;
+  bottom: 1px;
+  left: 0 !important;
+  transform: none !important;
+  width: 100% !important;
+  height: 1px;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.0);
 }
+
+.cid-uNUkHRmeL6 .plan .list-group-item:last-child::after {
+  display: none;
+}
+
+/* Usunięcie domyślnych kropek i dodanie odręcznej żółtej strzałki */
+.cid-uNUkHRmeL6 ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.cid-uNUkHRmeL6 li {
+  position: relative !important;
+  padding-left: 30px !important;
+  margin-bottom: 14px !important;
+}
+
+.cid-uNUkHRmeL6 li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;  /* Rozmiar plamki */
+  height: 16px;
+  /* Kodowana w CSS organiczna, nieregularna kropka/plamka w kolorze żółtym */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F07F1D'%3E%3Cpath d='M12 3c4.8 0 8.5 2.2 8.8 6.5.3 4.5-2.8 7.8-6.8 9.5-4.2 1.8-9.5.2-10.8-4.2C1.8 10.3 4.5 4.8 9 3.5c1-.3 2-.5 3-.5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (max-width: 991px) {
+  .cid-uNO7mJkeMi .plan {
+    margin-bottom: 2rem;
+  }
+}
+
+/* --- 1. SEKCJA Z OPISEM (Wymuszenie wyśrodkowania) --- */
+.cid-uNUID2HfHJ .mbr-section-head {
+  text-align: center !important;
+}
+
+.cid-uNUID2HfHJ p.mbr-text,
+.cid-uNUID2HfHJ .mbr-text.display-justify {
+  text-align: center !important;
+  display: block !important;
+  max-width: 800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.cid-uNUID2HfHJ .mbr-section-head,
+.cid-uNUID2HfHJ .mbr-text {
+  text-align: center !important;
+}
+
+#gallery4-az .mbr-text {
+  margin-top: 0px !important;             /* Usuwa górny margines, aby tekst był bliżej nagłówka */
+  text-align: left !important;    /* Wyrównuje linie tekstu do lewej wewnątrz bloku */
+  display: inline-block !important; /* Sprawia, że blok dopasowuje się do szerokości tekstu */
+}
+
+#gallery4-az .mbr-section-head {
+  text-align: center !important;  /* Wyśrodkowuje cały nagłówek i kontener */
+}
+
+
+/* ==========================================
+   ZAOKRĄGLENIE NAROŻNIKÓW ZDJĘĆ WE WSZYSTKICH GALERIACH
+   ========================================== */
+
+/* Zaokrąglenie miniatur w siatce galerii */
+section[class*="gallery"] .item-wrapper,
+section[class*="gallery"] .item-wrapper img {
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+/* Zaokrąglenie zdjęć w oknach wyskakujących (modalach / powiększeniach) */
+.modal.mbr-slider .carousel-item img {
+  border-radius: 16px !important;
+}
+
+
+/* --- 2. SEKCJA Z LISTĄ (Wycentrowanie i zbliżenie kolumn) --- */
+
+/* Wyśrodkowanie całego wiersza z kolumnami */
+.cid-uNUkHRmeL6 .row.justify-content-center {
+  justify-content: center !important;
+}
+
+/* Zbliżenie do siebie dwóch kolumn listy poprzez zmniejszenie ich szerokości i wyśrodkowanie */
+.cid-uNUkHRmeL6 .col-lg-6 {
+  flex: 0 0 auto !important;
+  width: 50% !important;          /* Zmniejszenie szerokości kolumn (domyślnie 50%), co zbliży je do środka */
+  max-width: 400px !important;    /* Zapobiega zbytniemu rozciąganiu na dużych ekranach */
+}
+
+/* Ustawienie zawartości listy, żeby listy trzymały się razem blisko środka */
+.cid-uNUkHRmeL6 ul.list {
+  display: inline-block !important;
+  text-align: left !important;    /* Tekst wewnątrz pozycji pozostaje wyrównany do lewej */
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+
 .cid-uNUkHRmeL6 H3 {
   text-align: center;
 }
 .cid-uNUiD2HfhJ {
-  padding-top: 1rem;
+  padding-top: 0rem;
   padding-bottom: 0rem;
   background-color: #ffffff;
 }
@@ -5389,6 +6423,280 @@ a {
 .cid-uNUiD2HfhJ H6 {
   text-align: center;
 }
+-------
+.cid-uNUiD2HfhJ02 {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  background-color: #ffffff;
+}
+.cid-uNUiD2HfhJ02 .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-uNUiD2HfhJ02 .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-uNUiD2HfhJ02 .item {
+  padding-bottom: 2rem;
+}
+.cid-uNUiD2HfhJ02 .item-wrapper {
+  height: 100%;
+  position: relative;
+}
+.cid-uNUiD2HfhJ02 .item-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+.cid-uNUiD2HfhJ02 .item-wrapper .icon-wrapper {
+  pointer-events: none;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 22px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  color: #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #1b1b1b;
+  transition: 0.2s;
+}
+.cid-uNUiD2HfhJ02 .item-wrapper:hover .icon-wrapper {
+  opacity: 0.7;
+}
+.cid-uNUiD2HfhJ02 .carousel-control,
+.cid-uNUiD2HfhJ02 .close {
+  background: #1b1b1b;
+}
+.cid-uNUiD2HfhJ02 .carousel-control-prev {
+  margin-left: 2.5rem;
+}
+.cid-uNUiD2HfhJ02 .carousel-control-prev span {
+  margin-right: 5px;
+}
+.cid-uNUiD2HfhJ02 .carousel-control-next {
+  margin-right: 2.5rem;
+}
+.cid-uNUiD2HfhJ02 .carousel-control-next span {
+  margin-left: 5px;
+}
+.cid-uNUiD2HfhJ02 .close {
+  position: fixed;
+  opacity: 0.5;
+  font-size: 22px;
+  font-weight: 300;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  top: 2.5rem;
+  right: 2.5rem;
+  border: 2px solid #fff;
+  text-shadow: none;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+  font-family: 'Moririse2';
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.cid-uNUiD2HfhJ02 .close::before {
+  content: '\e91a';
+}
+.cid-uNUiD2HfhJ02 .close:hover {
+  opacity: 1;
+  background: #000;
+  color: #fff;
+}
+.cid-uNUiD2HfhJ02 .carousel-control {
+  display: flex;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: -1.5rem;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.cid-uNUiD2HfhJ02 .carousel-control.carousel-control-prev {
+  left: 0;
+  margin-left: 2.5rem;
+}
+.cid-uNUiD2HfhJ02 .carousel-control.carousel-control-next {
+  right: 0;
+  margin-right: 2.5rem;
+}
+@media (max-width: 767px) {
+  .cid-uNUiD2HfhJ02 .carousel-control {
+    top: auto;
+    bottom: 1rem;
+  }
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 3px;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators li {
+  max-width: 15px;
+  height: 15px;
+  width: 15px;
+  max-height: 15px;
+  margin: 3px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators li.active,
+.cid-uNUiD2HfhJ02 .carousel-indicators li:hover {
+  opacity: 0.9;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators li::after,
+.cid-uNUiD2HfhJ02 .carousel-indicators li::before {
+  content: none;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators.ie-fix {
+  left: 50%;
+  display: block;
+  width: 60%;
+  margin-left: -30%;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .cid-uNUiD2HfhJ02 .carousel-indicators {
+    display: none !important;
+  }
+}
+@media (max-width: 991px) {
+  .cid-uNUiD2HfhJ02 .carousel-indicators {
+    margin-bottom: 3.625rem !important;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .cid-uNUiD2HfhJ02 .carousel-indicators {
+    display: none;
+  }
+}
+.cid-uNUiD2HfhJ02 .carousel-inner {
+  display: flex;
+  align-items: center;
+}
+.cid-uNUiD2HfhJ02 .carousel-inner > .active {
+  display: block;
+}
+.cid-uNUiD2HfhJ02 .carousel-control.left {
+  left: 0;
+  margin-left: 2.5rem;
+}
+.cid-uNUiD2HfhJ02 .carousel-control.right {
+  right: 0;
+  margin-right: 2.5rem;
+}
+.cid-uNUiD2HfhJ02 .carousel-control:hover {
+  background: #1b1b1b;
+  color: #fff;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .cid-uNUiD2HfhJ02 .carousel-control,
+  .cid-uNUiD2HfhJ02 .carousel-indicators,
+  .cid-uNUiD2HfhJ02 .modal .close {
+    position: fixed;
+  }
+}
+@media (max-width: 767px) {
+  .cid-uNUiD2HfhJ02 .mbr-slider .carousel-control {
+    top: auto;
+    bottom: 20px;
+  }
+  .cid-uNUiD2HfhJ02 .mbr-slider > .container .carousel-control {
+    margin-bottom: 0;
+  }
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators .active,
+.cid-uNUiD2HfhJ02 .carousel-indicators li {
+  width: 7px;
+  height: 7px;
+  margin: 3px;
+  background: #35200E;
+  opacity: 0.5;
+  border: 4px solid #35200E;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators .active {
+  background: #fff;
+}
+.cid-uNUiD2HfhJ02 .carousel-indicators li {
+  max-width: 15px;
+  max-height: 15px;
+  border-radius: 50%;
+}
+.cid-uNUiD2HfhJ02 .modal {
+  padding-left: 0 !important;
+  position: fixed;
+  overflow: hidden;
+  padding-right: 0 !important;
+}
+.cid-uNUiD2HfhJ02 .modal-dialog {
+  margin: 0 auto;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.cid-uNUiD2HfhJ02 .modal-content {
+  border-radius: 0;
+  border: none;
+  background: transparent;
+}
+.cid-uNUiD2HfhJ02 .modal-body {
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+.cid-uNUiD2HfhJ02 .modal-body img {
+  width: 100%;
+  object-fit: contain;
+  max-height: calc(100vh - 1.75rem);
+}
+.cid-uNUiD2HfhJ02 .carousel {
+  width: 100%;
+}
+.cid-uNUiD2HfhJ02 .modal-backdrop.in {
+  opacity: 0.8;
+}
+.cid-uNUiD2HfhJ02 .modal.fade .modal-dialog {
+  transition: margin-top 0.3s ease-out;
+}
+.cid-uNUiD2HfhJ02 .modal.fade .modal-dialog,
+.cid-uNUiD2HfhJ02 .modal.in .modal-dialog {
+  transform: none;
+}
+.cid-uNUiD2HfhJ02 .mbr-gallery .item-wrapper {
+  cursor: pointer;
+}
+.cid-uNUiD2HfhJ02 H6 {
+  text-align: center;
+}
+
+
+
+-------
+
 .cid-uOu5R0J1tQ {
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -5826,8 +7134,10 @@ a {
     left: -1rem;
   }
 }
+
+
 .cid-tIsnmQuVuP {
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 0rem;
   background-color: #ffffff;
 }
@@ -5843,6 +7153,173 @@ a {
   position: absolute;
   top: 0;
 }
+
+/* KRÓTKIE LINIE POD TYTUŁEM PODSTRON */
+/* Branding */
+#content4-2z .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content4-2z .wavy-underline::after {
+content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -4px !important;
+  /* Odbicie w poziomie (scaleX) i w pionie (scaleY) + wyśrodkowanie */
+  transform: translateX(-50%) scaleX(-1) scaleY(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23F4B72F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Ilustracje */
+#content4-3t .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content4-3t .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -4px !important;
+  transform: translateX(-50%) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23AF3051' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Papeteria */
+#content4-2y .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content4-2y .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -4px !important;
+  transform: translateX(-50%) scaleY(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23F07F1D' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Design */
+#content4-ac .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content4-ac .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -4px !important;
+  transform: translateX(-50%) scaleX(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%236C7838' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+
+/* Kontakt */
+#image1-28 .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#image1-28 .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 12% !important;
+  bottom: -4px !important;
+  /* Odbicie w poziomie (scaleX) i w pionie (scaleY) + wyśrodkowanie */
+  transform: translateX(-50%) scaleX(-1) scaleY(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23F4B72F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* FAQ*/
+#content16-5a .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content16-5a .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: -4px !important;
+  transform: translateX(-50%) scaleY(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23AF3051' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Dostawa */
+#content5-53 .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content5-53 .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 14% !important;
+  bottom: -4px !important;
+  transform: translateX(-50%) scaleX(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%236C7838' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+/* Polityka prywatności */
+#content5-4m .wavy-underline {
+  display: inline-block !important;
+  position: relative !important;
+  padding-bottom: 20px !important; /* Space between title and wavy line */
+}
+
+#content5-4m .wavy-underline::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 13% !important;
+  bottom: -4px !important;
+  /* Odbicie w poziomie (scaleX) i w pionie (scaleY) + wyśrodkowanie */
+  transform: translateX(-50%) scaleX(-1) scaleY(-1) !important;
+  width: 90px !important;
+  height: 16px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 24' preserveAspectRatio='none'%3E%3Cpath d='M2,12 C15,-4 22,28 35,12 C50,-4 58,28 72,12 C88,0 95,14 98,12' fill='none' stroke='%23F4B72F' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+
+
 .cid-uOhAspXKcs {
   padding-top: 0rem;
   padding-bottom: 0rem;
@@ -6817,7 +8294,7 @@ a {
   }
 }
 .cid-tImCXRCwaJ {
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 0rem;
   background-color: #ffffff;
 }
@@ -7856,7 +9333,7 @@ a {
   }
 }
 .cid-uNOyOv4qQw {
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 1rem;
   background-color: #ffffff;
 }
@@ -7874,7 +9351,7 @@ a {
 }
 .cid-uNOARGLqUJ {
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1%;
   background-color: #ffffff;
 }
 .cid-uNOARGLqUJ .mbr-fallback-image.disabled {
@@ -8142,7 +9619,7 @@ a {
 }
 .cid-uNOzqfqP0b {
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
   background-color: #ffffff;
 }
 .cid-uNOzqfqP0b .mbr-fallback-image.disabled {
@@ -8410,7 +9887,7 @@ a {
 }
 .cid-uOhcvSPDky {
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
   background-color: #ffffff;
 }
 .cid-uOhcvSPDky .mbr-fallback-image.disabled {
@@ -8678,7 +10155,7 @@ a {
 }
 .cid-uOha0fL0sX {
   padding-top: 0rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
   background-color: #ffffff;
 }
 .cid-uOha0fL0sX .mbr-fallback-image.disabled {

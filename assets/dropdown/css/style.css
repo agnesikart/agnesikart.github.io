@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dodaje odstęp od góry podczas skakania do sekcji, żeby menu jej nie zasłaniało */
+section[id] {
+  scroll-margin-top: 90px; /* Zwiększ lub zmniejsz w px w zależności od wysokości Twojego menu */
+}
 
 .navbar-dropdown {
   left: 0;
